@@ -1,0 +1,5 @@
+dash
+pandas
+scipy
+numpy
+dash_daq
