@@ -1,0 +1,7 @@
+# twitter_cluster52_10m.csv.zst
+# reuse real time: freq (time granularity 5)
+0:287427
+-1:1
+# reuse virtual time: freq (log base 1.5)
+0:287427
+-1:1

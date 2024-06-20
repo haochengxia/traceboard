@@ -1,0 +1,9 @@
+# twitter_cluster52_10m.csv.zst
+# req rate - time window 300 second
+
+# byte rate - time window 300 second
+
+# obj rate - time window 300 second
+
+# first seen obj (cold miss) rate - time window 300 second
+
