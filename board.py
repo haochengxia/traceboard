@@ -32,6 +32,7 @@ traces = pd.Series(trace_list)
 # -------------------------------------------------------------------------
 
 app = Dash()
+server = app.server
 
 app.layout = html.Div([
     html.H1(children='TraceBoard', style={'textAlign':'center'}),
@@ -248,4 +249,5 @@ def update_popularity_decay(trace, on):
         return {}, {}
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, dev_tools_ui=False, port=8888)
+
