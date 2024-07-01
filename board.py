@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 height = '50vh'
 
 # --------------------- read in all generated result ---------------------
-result_path = "./tests/results"
+result_path = "."
 import glob, os
 result_files = glob.glob(os.path.join(result_path, '*'))
 result_dict = defaultdict(list)

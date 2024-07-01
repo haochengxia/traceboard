@@ -1,0 +1,6 @@
+# all LF
+* text=auto eol=lf
+
+# special cases
+*.sh text eol=lf
+*.bat text eol=crlf
