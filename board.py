@@ -7,12 +7,15 @@ from plot import create_graph_access_pattern, create_graph_req_rate, create_grap
     create_graph_reuse_heatmap, create_graph_size_heatmap, create_graph_popularity_decay
 import logging
 
+
+from argparse import ArgumentParser
+
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 height = '50vh'
 
 # --------------------- read in all generated result ---------------------
-result_path = "."
+result_path = "./tests/results"
 import glob, os
 result_files = glob.glob(os.path.join(result_path, '*'))
 result_dict = defaultdict(list)
@@ -248,6 +251,10 @@ def update_popularity_decay(trace, on):
     else:
         return {}, {}
 
+
 if __name__ == '__main__':
-    app.run(debug=True, dev_tools_ui=False, port=8888)
+    ap = ArgumentParser()
+    ap.add_argument('--port', default=8888, type=int)
+    args = ap.parse_args()
+    app.run(debug=True, dev_tools_ui=False, port=args.port)
 
